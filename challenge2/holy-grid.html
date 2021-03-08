@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zxx">
+  <head>
+    <title>holy grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .margin-reset {
+        margin: 0;
+      }
+      .full-viewport {
+        min-height: 100vh;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto 1fr auto;
+      }
+      .grid-full-line {
+        grid-column: 1 / -1;
+      }
+      .grid-align-center {
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class="margin-reset full-viewport grid grid-align-center text-center">
+    <header class="grid-full-line">header</header>
+    <nav>nav</nav>
+    <main>content</main>
+    <aside>aside</aside>
+    <footer class="grid-full-line">made with &gt;3 by me</footer>
+  </body>
+</html>

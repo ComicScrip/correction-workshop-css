@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zxx">
+  <head>
+    <title>sticky</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* part 1 */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 200vh;
+      }
+      nav {
+        box-shadow: 0 0 .5rem gray;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      nav li {
+        list-style-type: none;
+      }
+      nav a {
+        display: inline-block;
+        padding: 1rem;
+      }
+
+      /* part 2 */
+
+      /* mobile first */
+
+      body {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      nav {
+        position: sticky;
+        bottom: 1rem;
+      }
+
+      /* desktop last */
+
+      @media screen and (min-width: 990px) {
+        body {
+          flex-direction: column;
+        }
+        nav {
+          bottom: initial;
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Main</a></li>
+        <li><a href="#">Other</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
